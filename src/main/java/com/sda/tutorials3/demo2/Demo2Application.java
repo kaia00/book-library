@@ -30,6 +30,7 @@ public class Demo2Application {
 		//System.out.println(book.toString());
 
 		System.out.println(library.toString());
+		System.out.println(library.login());
 
 		context.close();
 

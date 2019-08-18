@@ -1,5 +1,7 @@
 package com.sda.tutorials3.demo2;
 
+import com.sda.tutorials3.demo2.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -9,6 +11,18 @@ public class Library {
 
     private String address;
     private List<Book> booksInLibrary;
+
+    private UserService userService;
+
+    @Autowired
+    public Library(UserService userService) {
+        this.userService = userService;
+    }
+
+    public String login(){
+        return userService.login();
+    }
+
 
     public String getAddress() {
         return address;
