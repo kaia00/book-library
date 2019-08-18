@@ -14,8 +14,15 @@ public class Library {
 
     private UserService userService;
 
+    /*
     @Autowired
     public Library(UserService userService) {
+        this.userService = userService;
+    }
+     */
+
+    @Autowired
+    public void setUserService(UserService userService) {
         this.userService = userService;
     }
 

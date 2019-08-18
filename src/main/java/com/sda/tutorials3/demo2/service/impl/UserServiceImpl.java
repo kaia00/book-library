@@ -1,12 +1,13 @@
-package com.sda.tutorials3.demo2.service;
+package com.sda.tutorials3.demo2.service.impl;
 
+import com.sda.tutorials3.demo2.service.UserService;
 import org.springframework.stereotype.Component;
 
 @Component
 public class UserServiceImpl implements UserService {
 
     @Override
-    public String provideService() {
-       return "This is user service";
+    public String login() {
+       return "User logged in successfully";
     }
 }
